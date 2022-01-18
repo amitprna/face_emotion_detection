@@ -16,8 +16,14 @@ url = "https://assets1.lottiefiles.com/packages/lf20_e7b2phbv.json"
 res_json = load_lottieurl(url)
 st_lottie(res_json,height=300,width=1200)
 
-
-st.title("Detects Emotion Age Gender Using Face as Input ")
+html_temp = """
+<body style="background-color:red;">
+<div style="background-color:teal ;padding:10px">
+<h2 style="color:white;text-align:center;">Detects Emotion Age Gender Using Face as Input</h2>
+</div>
+</body>
+"""
+st.markdown(html_temp, unsafe_allow_html=True)
 st.write("Tools used - Deepface OpenCV")
 
 one,two = st.columns(2)
