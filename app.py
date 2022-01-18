@@ -19,12 +19,19 @@ st_lottie(res_json,height=300,width=1200)
 html_temp = """
 <body style="background-color:red;">
 <div style="background-color:teal ;padding:10px">
-<h2 style="color:white;text-align:center;">Detects Emotion Age Gender Using Face as Input</h2>
+<h3 style="color:white;text-align:center;">Detects Emotion Age Gender Using Face as Input</h3>
 </div>
 </body>
 """
 st.markdown(html_temp, unsafe_allow_html=True)
-st.write("Tools used - Deepface OpenCV")
+
+html_temp_home1 = """<div style="background-color:#6D7B8D;padding:10px">
+                                            <h4 style="color:white;text-align:center;">
+                                            Tools used - Deepface OpenCV Streamlit</h4>
+                                            </div>
+                                            </br>"""
+st.markdown(html_temp_home1, unsafe_allow_html=True)
+    
 
 one,two = st.columns(2)
 
