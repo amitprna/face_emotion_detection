@@ -3,7 +3,18 @@ from deepface import DeepFace
 import streamlit as st
 from PIL import Image
 import numpy as np
+import request
+from streamlit_lottie import st_lottie
 
+def load_lottieurl(url: str):
+    r = requests.get(url)
+    if r.status_code != 200:
+        return None
+    return r.json()
+
+url = "https://assets1.lottiefiles.com/packages/lf20_e7b2phbv.json"
+res_json = load_lottieurl(url)
+st_lottie(res_json)
 
 st.title("Detects Emotion Age Gender Using Face as Input ")
 st.write("Tools used - Deepface OpenCV")
