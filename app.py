@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 
 
-st.title("Face Emotion Age Gender Detector")
+st.title("Detects Emotion Age Gender Using Face as Input ")
 st.write("Tools used - Deepface OpenCV")
 
 one,two = st.columns(2)
