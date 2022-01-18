@@ -47,5 +47,5 @@ with two:
     else:
         st.write('**No image for processing**')
         url2 = "https://assets10.lottiefiles.com/private_files/lf30_jo7huq2d.json"
-        res_json = load_lottieurl(url)
+        res_json = load_lottieurl(url2)
         st_lottie(res_json,height=70,width=70)
