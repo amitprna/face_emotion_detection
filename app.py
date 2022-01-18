@@ -27,7 +27,7 @@ with one:
     input_img = st.camera_input('Please click a picture.')
     url1 = "https://assets1.lottiefiles.com/packages/lf20_uKAOG6.json"
     res_json = load_lottieurl(url1)
-    st_lottie(res_json,height=10,width=10)
+    st_lottie(res_json,height=50,width=50)
 with two:
     if input_img:
         img = Image.open(input_img)
