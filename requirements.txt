@@ -3,3 +3,4 @@ numpy
 deepface
 opencv-python-headless
 Pillow
+streamlit_lottie
