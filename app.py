@@ -24,7 +24,7 @@ with two:
             cv2.rectangle(img,(x,y),(x+w, y+h),(0,255,0), 2)
         font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.putText( img, predictions['dominant_emotion'], (0,50), font, 1, (201, 52, 235), 2, cv2.LINE_4 );
-        cv2.putText( img, str(predictions['age']), (200,50), font, 1, (201, 52, 235), 2, cv2.LINE_AA );
+        cv2.putText( img, str(predictions['age']), (200,0), font, 1, (201, 52, 235), 2, cv2.LINE_AA );
         cv2.putText( img, predictions['gender'], (0,150), font, 1, (201, 52, 235), 2, cv2.LINE_4 );
         st.image(img)
     else:
