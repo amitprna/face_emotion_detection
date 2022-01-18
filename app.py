@@ -14,7 +14,7 @@ def load_lottieurl(url: str):
 
 url = "https://assets1.lottiefiles.com/packages/lf20_e7b2phbv.json"
 res_json = load_lottieurl(url)
-st_lottie(res_json)
+st_lottie(res_json,height=50,width=200)
 
 st.title("Detects Emotion Age Gender Using Face as Input ")
 st.write("Tools used - Deepface OpenCV")
