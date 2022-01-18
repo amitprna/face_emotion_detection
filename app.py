@@ -1,0 +1,31 @@
+import cv2
+from deepface import DeepFace
+import streamlit as st
+from PIL import Image
+import numpy as np
+
+
+
+one,two = st.columns(2)
+
+with one:
+    st.write("**Input Feed**")
+    input_img = st.camera_input('Please click a picture.')
+with two:
+    if input_img:
+        img = Image.open(input_img)
+        img = np.array(img)
+        predictions = DeepFace.analyze(img)
+        faceCascade = cv2.CascadeClassifier('harcascade_frontalface_default.xml')
+        gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+        faces = faceCascade.detectMultiScale(gray,1.1,4)
+
+        for (x,y,w,h) in faces:
+            cv2.rectangle(img,(x,y),(x+w, y+h),(0,255,0), 2)
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText( img, predictions['dominant_emotion'], (0,50), font, 1, (201, 52, 235), 2, cv2.LINE_4 );
+        cv2.putText( img, str(predictions['age']), (200,50), font, 1, (201, 52, 235), 2, cv2.LINE_AA );
+        cv2.putText( img, predictions['gender'], (0,150), font, 1, (201, 52, 235), 2, cv2.LINE_4 );
+        st.image(img)
+    else:
+        st.write('**No image for processing**')
