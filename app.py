@@ -15,7 +15,7 @@ with two:
     if input_img:
         img = Image.open(input_img)
         img = np.array(img)
-        predictions = DeepFace.analyze(img)
+        predictions = DeepFace.analyze(img,enforce_detection=False)
         faceCascade = cv2.CascadeClassifier('harcascade_frontalface_default.xml')
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         faces = faceCascade.detectMultiScale(gray,1.1,4)
