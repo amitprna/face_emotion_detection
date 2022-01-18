@@ -16,9 +16,6 @@ url = "https://assets1.lottiefiles.com/packages/lf20_e7b2phbv.json"
 res_json = load_lottieurl(url)
 st_lottie(res_json,height=300,width=1200)
 
-url1 = "https://assets1.lottiefiles.com/packages/lf20_uKAOG6.json"
-res_json = load_lottieurl(url1)
-st_lottie(res_json,height=300,width=300)
 
 st.title("Detects Emotion Age Gender Using Face as Input ")
 st.write("Tools used - Deepface OpenCV")
@@ -28,6 +25,9 @@ one,two = st.columns(2)
 with one:
     st.write("**Input Feed**")
     input_img = st.camera_input('Please click a picture.')
+    url1 = "https://assets1.lottiefiles.com/packages/lf20_uKAOG6.json"
+    res_json = load_lottieurl(url1)
+    st_lottie(res_json,height=10,width=10)
 with two:
     if input_img:
         img = Image.open(input_img)
