@@ -3,7 +3,7 @@ from deepface import DeepFace
 import streamlit as st
 from PIL import Image
 import numpy as np
-import request
+import requests
 from streamlit_lottie import st_lottie
 
 def load_lottieurl(url: str):
