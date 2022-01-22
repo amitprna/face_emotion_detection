@@ -8,6 +8,7 @@ from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="Emotion Detection", page_icon="🐱‍🚀")
 
+@st.cache(suppress_st_warning=True)
 def load_lottieurl(url: str):
     r = requests.get(url)
     if r.status_code != 200:
@@ -45,7 +46,7 @@ with one:
     st_lottie(res_json,height=50,width=50)
     input_img = st.camera_input('Please click a picture.')
     
-@st.cache(suppress_st_warning=True)
+
 with two:
     if input_img:
         img = Image.open(input_img)
